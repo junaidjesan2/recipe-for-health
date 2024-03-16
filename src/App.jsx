@@ -4,10 +4,10 @@ import NavBar from "./components/shared/NavBar";
 
 function App() {
   return (
-    <>
+    <div className="px-10">
       <NavBar />
       <Home />
-    </>
+    </div>
   );
 }
 
