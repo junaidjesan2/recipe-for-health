@@ -4,7 +4,7 @@ import NavBar from "./components/shared/NavBar";
 
 function App() {
   return (
-    <div className="px-10">
+    <div className="px-10 mx-auto">
       <NavBar />
       <Home />
     </div>
