@@ -6,7 +6,7 @@ import Cards from "../shared/Cards";
 
 export default function Home() {
   return (
-    <div>
+    <div className="mb-28">
       <div>
         <Banner />
       </div>
