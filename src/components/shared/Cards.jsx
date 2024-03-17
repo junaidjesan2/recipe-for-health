@@ -1,9 +1,7 @@
 import { CiTimer } from "react-icons/ci";
 import { FaFireAlt } from "react-icons/fa";
 
-
-
-export default function Cards({ d }) {
+export default function Cards({ d, handleMakeWish, wishToCook }) {
   return (
     <div className="p-4 drop-shadow-lg shadow-black border-2 rounded-lg mx-auto">
       <div className="space-y-6">
@@ -29,10 +27,21 @@ export default function Cards({ d }) {
       <hr />
       <div>
         <div className="flex items-center justify-between my-4">
-            <h1 className="flex flex-row items-center gap-3"><CiTimer/>{d.preparing_time} minutes</h1>
-            <h1 className="flex flex-row items-center gap-3"><FaFireAlt/>{d.calories} calories</h1>
+          <h1 className="flex flex-row items-center gap-3">
+            <CiTimer />
+            {d.preparing_time} minutes
+          </h1>
+          <h1 className="flex flex-row items-center gap-3">
+            <FaFireAlt />
+            {d.calories} calories
+          </h1>
         </div>
-        <button className="bg-zinc-700 text-white py-2 px-3 rounded-2xl">Want to Cook</button>
+        <button
+          onClick={() => handleMakeWish(d)}
+          className="bg-zinc-700 text-white py-2 px-3 rounded-2xl"
+        >
+          Want to Cook
+        </button>
       </div>
     </div>
   );
